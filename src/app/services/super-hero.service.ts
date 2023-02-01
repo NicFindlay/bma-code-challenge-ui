@@ -12,6 +12,6 @@ export class SuperHeroService {
   constructor(private http: HttpClient) { }
 
   public getSuperHeroes() : Observable<SuperHero[]>{
-    return this.http.get<SuperHero[]>('${environment.apiUrl}/${this.url}');
+    return this.http.get<SuperHero[]>(`${environment.apiUrl}/${this.url}`);
   }
 }
